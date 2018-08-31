@@ -48,7 +48,18 @@ function iterativeQuickSort(arr)
         stack.push(left);
         break;
   }
-  return sorted;
+
+
+  for(let i = 0; i < lines[0].length; i++)
+  {
+    for(let j = 0; j < sorted.length; j++)
+    {
+      if(lines[0][i] == sorted[j])
+        lines[0].splice(i, 1);
+    }
+  }
+
+  lines[0] = sorted.concat(lines[0]);
 }
 
 //Bubble Sort (one iteration per draw cycle)
@@ -60,7 +71,7 @@ function bubbleSort(lines)
     {
       swap(lines, i, i + 1);
       stroke(255);
-      line(i + 1 + algDisplayWidth + offset, algDisplayHeight - offset, i + 1 + algDisplayWidth + offset, algDisplayHeight - offset - lines[i + 1]);
+      line(i + algDisplayWidth + offset, algDisplayHeight - offset, i + algDisplayWidth + offset, algDisplayHeight - offset - lines[i]);
     }
   }
 }

@@ -98,13 +98,7 @@ function sortLines()
 {
   //Quicksort builds a sorted array from the initial one
   //The sorted array is displayed alongside the remaining part of the initial one
-  let aux = iterativeQuickSort(lines[0]);
-
-  for(let i = 0; i < aux.length; i++)
-  {
-    lines[0][i] = aux[i];
-  }
-
+  iterativeQuickSort(lines[0]);
   bubbleSort(lines[1]); //Each swap in an iteration is displayed
   iterativeMergeSort(lines[2]); //Each separation is displayed (to/from)
   selectionSort(lines[3]); //Each swap is displayed
