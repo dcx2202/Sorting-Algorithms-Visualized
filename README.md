@@ -5,7 +5,7 @@
 
 ![alt text](https://github.com/dcx2202/Sorting-Algorithms-Visualized/blob/master/sorting_algs.png)
 
-## The algorithms do one iteration at each draw cycle
+## The algorithms do one iteration per draw cycle
 
 Quicksort builds a sorted array from the initial one
 The sorted array is displayed alongside the remaining part of the initial one
